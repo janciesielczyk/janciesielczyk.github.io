@@ -4,7 +4,7 @@ var names = [];
 var m = new MersenneTwister();
 var kasiaFeatureEnabled = false;
 
-console.log('updated pairs');
+console.log('updated pairs fixed');
 
 function draw() {
     blockNames();
@@ -31,7 +31,7 @@ function draw() {
                 j++;
                 drawnIndex = getRandomInt(0, names.length - 1);
             }
-            while((names[drawnIndex] === key || isSameAsLastYear(names[drawnIndex], key)) && j < 50);
+            while((names[drawnIndex] === key || isSameAsLastYear(names[drawnIndex], key)));
             results[key] = names[drawnIndex];
             names.splice(drawnIndex, 1);
         }
