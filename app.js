@@ -4,6 +4,8 @@ var names = [];
 var m = new MersenneTwister();
 var kasiaFeatureEnabled = false;
 
+console.log('updated pairs');
+
 function draw() {
     blockNames();
     var nameInputs = document.getElementsByClassName('nameInput');
