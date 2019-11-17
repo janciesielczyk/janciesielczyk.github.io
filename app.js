@@ -4,7 +4,7 @@ var names = [];
 var m = new MersenneTwister();
 var kasiaFeatureEnabled = false;
 
-console.log('updated pairs fixed');
+console.log('updated pairs fixed2');
 
 function draw() {
     blockNames();
@@ -30,8 +30,20 @@ function draw() {
             do{
                 j++;
                 drawnIndex = getRandomInt(0, names.length - 1);
+                // console.log(isSameAsLastYear(names[drawnIndex], key));
+                // console.log(names[drawnIndex] === key);
+                // console.log(names[drawnIndex] === key || isSameAsLastYear(names[drawnIndex], key));
+                // console.log(names[drawnIndex] + 'daje ' + key);
+                // console.log('-------------------');
             }
-            while((names[drawnIndex] === key || isSameAsLastYear(names[drawnIndex], key)));
+            while((names[drawnIndex] === key || isSameAsLastYear(key, names[drawnIndex]) ) && j < 300);
+            
+            if(j === 1000) {
+                console.log('error');
+                alert('error');
+                break;
+            }
+            
             results[key] = names[drawnIndex];
             names.splice(drawnIndex, 1);
         }
@@ -52,7 +64,7 @@ const pairs = [
 ];
 
 function isSameAsLastYear(giver, recipient) {
-    console.log(pairs);
+    //console.log(pairs);
     return pairs.some((pair) => pair[0] === giver && pair[1] === recipient);
 }
 
