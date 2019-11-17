@@ -41,9 +41,12 @@ function draw() {
 const pairs = [
     ['Jan', 'Marcin'],
     ['Tadeusz', 'Bożena'],
-    // ['Jan', 'Marcin'],
-    // ['Jan', 'Marcin'],
-    // ['Jan', 'Marcin'],
+    ['Sabina', 'Tadeusz'],
+    ['Babcia', 'Maria'],
+    ['Marek', 'Babcia'],
+    ['Bożena', 'Marek'],
+    ['Marcin', 'Jan'],
+    ['Maria', 'Sabina'],
 ];
 
 function isSameAsLastYear(giver, recipient) {
