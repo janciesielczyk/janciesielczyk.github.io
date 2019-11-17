@@ -2,7 +2,7 @@
 var results = {};
 var names = [];
 var m = new MersenneTwister();
-var kasiaFeatureEnabled = true;
+var kasiaFeatureEnabled = false;
 
 function draw() {
     blockNames();
@@ -29,13 +29,25 @@ function draw() {
                 j++;
                 drawnIndex = getRandomInt(0, names.length - 1);
             }
-            while(names[drawnIndex] === key && j < 50);
+            while(names[drawnIndex] === key && isSameAsLastYear(names[drawnIndex], key) && j < 50);
             results[key] = names[drawnIndex];
             names.splice(drawnIndex, 1);
         }
     }
     console.log(results);
     addActionButtons();
+}
+
+const pairs = [
+    ['Jan', 'Marcin'],
+    ['Tadeusz', 'Bożena'],
+    // ['Jan', 'Marcin'],
+    // ['Jan', 'Marcin'],
+    // ['Jan', 'Marcin'],
+];
+
+function isSameAsLastYear(giver, recipient) {
+    return pairs.some((pair) => pair[0] === giver && pair[1] === recipient);
 }
 
 function addName() {
