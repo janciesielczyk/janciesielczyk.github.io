@@ -3,7 +3,7 @@ var results = {};
 var names = [];
 var m = new MersenneTwister();
 
-console.log('updated  2020');
+console.log('updated 2020 with mailjet');
 
 function draw() {
     blockNames();
@@ -163,7 +163,7 @@ function sendEmail(name, button) {
     button.innerHTML = 'Sending...';
     button.disabled = true;
 
-    var service_id = "sendgrid";
+    var service_id = "service_mj95fuc";
     var template_id = "template_1oRpYHPm";
 
     var template_params = {
