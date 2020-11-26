@@ -2,9 +2,8 @@
 var results = {};
 var names = [];
 var m = new MersenneTwister();
-var kasiaFeatureEnabled = false;
 
-console.log('updated pairs fixed2');
+console.log('updated  2020');
 
 function draw() {
     blockNames();
@@ -15,15 +14,8 @@ function draw() {
         names.push(nameInputs[i].value);
     }
 
-    if(kasiaFeatureEnabled) {
-        results['Daria'] = 'Kasia';
-        var index = names.indexOf('Kasia');
-        if (index !== -1) {
-            names.splice(index, 1);
-        }
-    }
-
     for (var key in results) {
+        //console.log('searching recipient for: ', key);
         if (results.hasOwnProperty(key) && results[key] === '') {
             var j=0;
             var drawnIndex;
@@ -33,8 +25,8 @@ function draw() {
                 // console.log(isSameAsLastYear(names[drawnIndex], key));
                 // console.log(names[drawnIndex] === key);
                 // console.log(names[drawnIndex] === key || isSameAsLastYear(names[drawnIndex], key));
-                // console.log(names[drawnIndex] + 'daje ' + key);
-                // console.log('-------------------');
+                // console.log(names[drawnIndex] + '======>' + key);
+                // console.log('-------------------', j);
             }
             while((names[drawnIndex] === key || isSameAsLastYear(key, names[drawnIndex]) ) && j < 300);
             
@@ -43,28 +35,56 @@ function draw() {
                 alert('error');
                 break;
             }
+
+            if(names[drawnIndex] === key || isSameAsLastYear(key, names[drawnIndex])) {
+                throw new Error('error, trying again');
+            }
+
             
             results[key] = names[drawnIndex];
+            console.log(key, '=>', names[drawnIndex]);
             names.splice(drawnIndex, 1);
         }
     }
+
+    // // check
+    // const check = Object.keys(results).some((key) => {
+    //     return names[drawnIndex] === key || isSameAsLastYear(key, names[drawnIndex]);
+    // })
+    // if() {
+    //     console.log('error, trying again');
+    //     return draw();
+    // }
+
+
     console.log(results);
     addActionButtons();
 }
 
+function tryDraw() {
+    try {
+        draw();
+    } catch (error) {
+        var results = {};
+        var names = [];
+        alert('error, try again')
+    }
+}
+
 const pairs = [
-    ['Jan', 'Marcin'],
-    ['Tadeusz', 'Bożena'],
-    ['Sabina', 'Tadeusz'],
-    ['Babcia', 'Maria'],
-    ['Marek', 'Babcia'],
-    ['Bożena', 'Marek'],
-    ['Marcin', 'Jan'],
-    ['Maria', 'Sabina'],
+    ['Marcin', 'Tadeusz'],
+    ['Maria', 'Marek'],
+    ['Babcia', 'Jan'],
+    ['Sabina', 'Marcin'],
+    ['Tadeusz', 'Maria'],
+    ['Marek', 'Bożena'],
+    ['Jan', 'Sabina'],
+    ['Bożena', 'Babcia'],
 ];
 
 function isSameAsLastYear(giver, recipient) {
     //console.log(pairs);
+    //console.log('isSameAsLastYear', pairs.some((pair) => pair[0] === giver && pair[1] === recipient));
     return pairs.some((pair) => pair[0] === giver && pair[1] === recipient);
 }
 
