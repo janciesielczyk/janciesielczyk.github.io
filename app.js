@@ -70,17 +70,28 @@ function tryDraw() {
         alert('error, try again')
     }
 }
-
+// 2020
 const pairs = [
-    ['Marcin', 'Tadeusz'],
-    ['Maria', 'Marek'],
-    ['Babcia', 'Jan'],
-    ['Sabina', 'Marcin'],
-    ['Tadeusz', 'Maria'],
-    ['Marek', 'Bożena'],
-    ['Jan', 'Sabina'],
-    ['Bożena', 'Babcia'],
+    ['Sabina', 'Tadeusz'],
+    ['Marek', 'Sabina'],
+    ['Bożena', 'Marcin'],
+    ['Jan', 'Marek'],
+    ['Tadeusz', 'Jan'],
+    ['Maria', 'Bożena'],
+    ['Marcin', 'Babcia'],
+    // ['Babcia', 'Maria'],
 ];
+// 2019
+// const pairs = [
+//     ['Marcin', 'Tadeusz'],
+//     ['Maria', 'Marek'],
+//     ['Babcia', 'Jan'],
+//     ['Sabina', 'Marcin'],
+//     ['Tadeusz', 'Maria'],
+//     ['Marek', 'Bożena'],
+//     ['Jan', 'Sabina'],
+//     ['Bożena', 'Babcia'],
+// ];
 
 function isSameAsLastYear(giver, recipient) {
     //console.log(pairs);
