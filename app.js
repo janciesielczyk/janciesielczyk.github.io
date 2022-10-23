@@ -70,17 +70,27 @@ function tryDraw() {
         alert('error, try again')
     }
 }
-// 2020
+// 2021
 const pairs = [
-    ['Sabina', 'Tadeusz'],
-    ['Marek', 'Sabina'],
-    ['Bożena', 'Marcin'],
-    ['Jan', 'Marek'],
-    ['Tadeusz', 'Jan'],
-    ['Maria', 'Bożena'],
-    ['Marcin', 'Babcia'],
-    // ['Babcia', 'Maria'],
+    ['Jan', 'Maria'],
+    ['Sabina', 'Marcin'],
+    ['Bożena', 'Tadeusz'],
+    ['Tadeusz', 'Sabina'],
+    ['Marek', 'Bożena'],
+    ['Marcin', 'Jan'],
+    ['Maria', 'Marek'],
 ];
+// // 2020
+// const pairs = [
+//     ['Sabina', 'Tadeusz'],
+//     ['Marek', 'Sabina'],
+//     ['Bożena', 'Marcin'],
+//     ['Jan', 'Marek'],
+//     ['Tadeusz', 'Jan'],
+//     ['Maria', 'Bożena'],
+//     ['Marcin', 'Babcia'],
+//     // ['Babcia', 'Maria'],
+// ];
 // 2019
 // const pairs = [
 //     ['Marcin', 'Tadeusz'],
