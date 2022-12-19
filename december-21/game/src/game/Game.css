@@ -1,0 +1,33 @@
+.game {
+  background: #e5e5e5;
+}
+
+.santa {
+  max-width: 20vw;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  animation: linear infinite;
+  animation-name: run;
+  animation-duration: 1s;
+  user-select: none;
+  outline: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(200%); 
+  }
+}
