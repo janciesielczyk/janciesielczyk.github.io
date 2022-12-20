@@ -1,17 +1,37 @@
 .game {
   background: #e5e5e5;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-view {
+  flex-grow: 1;
+  position: relative;
+}
+
+.game-bar {
+  background: #008037;
+  position: relative;
+  width: 100%;
+  padding: 0.5em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .santa {
-  max-width: 20vw;
+  max-height: 20vh;
   cursor: pointer;
   position: absolute;
   left: 0;
-  animation: linear infinite;
-  animation-name: run;
-  animation-duration: 1s;
   user-select: none;
   outline: none;
+  animation: linear infinite;
   user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -20,14 +40,30 @@
   -ms-user-select: none;
 }
 
-@keyframes run {
-  0% {
+.santa-right {
+  animation-name: run-right;
+  animation-duration: 1s;
+}
+
+.santa-left {
+  animation-name: run-left;
+  animation-duration: 1s;
+}
+
+@keyframes run-right {
+  from {
     transform: translateX(0);
   }
-  50% {
-    transform: translateX(100%);
-  }
-  100% {
+  to {
     transform: translateX(200%); 
+  }
+}
+
+@keyframes run-left {
+  from {
+    transform: rotateY(180deg) translateX(0);
+  }
+  to {
+    transform: rotateY(180deg) translateX(200%); 
   }
 }
