@@ -18,7 +18,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build --dest dec21/game",
+    "help": "gh-pages --help"
   },
   "eslintConfig": {
     "extends": [
