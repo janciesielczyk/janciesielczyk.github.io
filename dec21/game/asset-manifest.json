@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dec21/game/static/css/main.7a2bc748.css",
+    "main.js": "/dec21/game/static/js/main.0f8595b4.js",
+    "static/js/787.6a541d2d.chunk.js": "/dec21/game/static/js/787.6a541d2d.chunk.js",
+    "static/media/santa1-compressed.gif": "/dec21/game/static/media/santa1-compressed.58cba7f51762c0ac799b.gif",
+    "index.html": "/dec21/game/index.html",
+    "main.7a2bc748.css.map": "/dec21/game/static/css/main.7a2bc748.css.map",
+    "main.0f8595b4.js.map": "/dec21/game/static/js/main.0f8595b4.js.map",
+    "787.6a541d2d.chunk.js.map": "/dec21/game/static/js/787.6a541d2d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a2bc748.css",
+    "static/js/main.0f8595b4.js"
+  ]
+}
