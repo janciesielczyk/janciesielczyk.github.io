@@ -26,6 +26,21 @@
   box-sizing: border-box;
 }
 
+.game-start, .game-finish {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #d00200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  z-index: 5;
+}
+
 :root {
   --santa-animation-time: 5s;
   --santa-animation-offset: 150vw;
