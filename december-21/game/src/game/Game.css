@@ -22,48 +22,106 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+:root {
+  --santa-animation-time: 5s;
+  --santa-animation-offset: 150vw;
+  --santa-height: 20vh;
 }
 
 .santa {
-  max-height: 20vh;
   cursor: pointer;
   position: absolute;
   left: 0;
-  user-select: none;
   outline: none;
   animation: linear infinite;
-  user-drag: none;
+  animation-duration: var(--santa-animation-time);
+  animation-name: run;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  background-image: url('../img/santa1-compressed.gif');
+  height: 20vh;
+  aspect-ratio: 0.7462;
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* animation-play-state: paused; */
+  -webkit-tap-highlight-color: transparent;
 }
 
+::selection { background: transparent;color:inherit; }
+::-moz-selection { background: transparent;color:inherit; }
+
 .santa-right {
-  animation-name: run-right;
-  animation-duration: 1s;
+  animation-delay: calc(var(--santa-animation-time) / 2 - var(--santa-animation-time));
 }
 
 .santa-left {
-  animation-name: run-left;
-  animation-duration: 1s;
 }
 
-@keyframes run-right {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(200%); 
-  }
+.santa.santa-bottomright {
+  animation-name: run2;
 }
 
-@keyframes run-left {
+.santa.santa-bottomleft {
+  animation-name: run3;
+}
+
+.santa-speed-1 { animation-duration: var(--santa-animation-time); }
+.santa-speed-2 { animation-duration: calc(var(--santa-animation-time) * 0.9); }
+.santa-speed-3 { animation-duration: calc(var(--santa-animation-time) * 0.8); }
+.santa-speed-4 { animation-duration: calc(var(--santa-animation-time) * 0.7); }
+
+.santa-size-1 { height: var(--santa-height); }
+.santa-size-2 { height: calc(var(--santa-height) * 0.9); }
+.santa-size-3 { height: calc(var(--santa-height) * 0.8); }
+.santa-size-4 { height: calc(var(--santa-height) * 0.7); }
+
+
+@keyframes run {
   from {
     transform: rotateY(180deg) translateX(0);
   }
-  to {
-    transform: rotateY(180deg) translateX(200%); 
+  50% {
+    transform: rotateY(180deg) translateX(var(--santa-animation-offset)); 
   }
-}
+  50.01% {
+    transform: rotateY(0) translateX(calc(var(--santa-animation-offset) * -1)); 
+  }
+  to {
+    transform: rotateY(0) translateX(0); 
+  }
+} 
+@keyframes run2 {
+  from {
+    transform: rotate(30deg) rotateY(180deg) translateX(0);
+  }
+  50% {
+    transform: rotate(30deg) rotateY(180deg) translateX(var(--santa-animation-offset)); 
+  }
+  50.01% {
+    transform: rotate(30deg) rotateY(0) translateX(calc(var(--santa-animation-offset) * -1)); 
+  }
+  to {
+    transform: rotate(30deg) rotateY(0) translateX(0); 
+  }
+} 
+@keyframes run3 {
+  from {
+    transform: rotate(-30deg) rotateY(180deg) translateX(0);
+  }
+  50% {
+    transform: rotate(-30deg) rotateY(180deg) translateX(var(--santa-animation-offset)); 
+  }
+  50.01% {
+    transform: rotate(-30deg) rotateY(0) translateX(calc(var(--santa-animation-offset) * -1)); 
+  }
+  to {
+    transform: rotate(-30deg) rotateY(0) translateX(0); 
+  }
+} 
