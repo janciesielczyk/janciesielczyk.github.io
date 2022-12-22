@@ -17,7 +17,7 @@
   padding: 0.5em;
   color: #fff;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: calc(8px + 2vmin);
   text-align: center;
   display: flex;
   justify-content: center;
@@ -34,6 +34,7 @@
   width: 100%;
   background-color: #d00200;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
@@ -41,9 +42,25 @@
   z-index: 5;
 }
 
+pre {
+  font-size: 2em;
+}
+
+.game-start button {
+  padding: 15px;
+  width: 50%;
+  margin-top: 2em;
+}
+
+.panda {
+  max-height: 15vh;
+  margin-bottom: 1em;
+}
+
 :root {
   --santa-animation-time: 5s;
   --santa-animation-offset: 150vw;
+  /* --santa-animation-offset: 150vw; */
   --santa-height: 20vh;
 }
 
@@ -65,8 +82,11 @@
   aspect-ratio: 0.7462;
   background-size: contain;
   background-repeat: no-repeat;
-  /* animation-play-state: paused; */
   -webkit-tap-highlight-color: transparent;
+  /* animation-play-state: paused; */
+  transition: height, width, opacity 1s ease-in-out;
+  background-origin: content-box;
+  padding-left: 15%;
 }
 
 ::selection { background: transparent;color:inherit; }
@@ -97,6 +117,14 @@
 .santa-size-3 { height: calc(var(--santa-height) * 0.8); }
 .santa-size-4 { height: calc(var(--santa-height) * 0.7); }
 
+.santa.santa-catched {
+  opacity: 0;
+  animation-delay: 0;
+  /* height: 0; */
+  /* animation: cubic-bezier(0, 0, 0.2, 1) once;
+  animation-name: catched;
+  animation-duration: 2s; */
+}
 
 @keyframes run {
   from {
@@ -138,5 +166,15 @@
   }
   to {
     transform: rotate(-30deg) rotateY(0) translateX(0); 
+  }
+} 
+
+@keyframes catched {
+  from {
+    opacity: 1;
+  }
+  to {
+    /* transform: scale(0); */
+    opacity: .2;
   }
 } 
