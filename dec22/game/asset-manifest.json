@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/dec22/game/static/css/main.64e82718.css",
-    "main.js": "/dec22/game/static/js/main.cfc664e4.js",
+    "main.css": "/dec22/game/static/css/main.6b07c044.css",
+    "main.js": "/dec22/game/static/js/main.c43c3946.js",
     "static/js/787.6a541d2d.chunk.js": "/dec22/game/static/js/787.6a541d2d.chunk.js",
     "static/media/santa1-compressed.gif": "/dec22/game/static/media/santa1-compressed.58cba7f51762c0ac799b.gif",
+    "static/media/panda3.png": "/dec22/game/static/media/panda3.b590f9296c17ca8813d2.png",
+    "static/media/panda2.png": "/dec22/game/static/media/panda2.1c8e0c330f95e05e679f.png",
+    "static/media/panda1.png": "/dec22/game/static/media/panda1.8ca28d5f2ffaccd882c6.png",
     "index.html": "/dec22/game/index.html",
-    "main.64e82718.css.map": "/dec22/game/static/css/main.64e82718.css.map",
-    "main.cfc664e4.js.map": "/dec22/game/static/js/main.cfc664e4.js.map",
+    "main.6b07c044.css.map": "/dec22/game/static/css/main.6b07c044.css.map",
+    "main.c43c3946.js.map": "/dec22/game/static/js/main.c43c3946.js.map",
     "787.6a541d2d.chunk.js.map": "/dec22/game/static/js/787.6a541d2d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.64e82718.css",
-    "static/js/main.cfc664e4.js"
+    "static/css/main.6b07c044.css",
+    "static/js/main.c43c3946.js"
   ]
 }
