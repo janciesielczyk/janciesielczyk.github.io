@@ -3,8 +3,6 @@ var results = {};
 var names = [];
 var m = new MersenneTwister();
 
-console.log('updated 2020 with mailjet');
-
 function draw() {
     blockNames();
     var nameInputs = document.getElementsByClassName('nameInput');
