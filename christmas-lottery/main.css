@@ -1,0 +1,134 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.title {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+.participants {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.participant {
+    display: block;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.nameInput {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.nameInput:disabled {
+    opacity: .8;
+}
+
+button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+    background-color: #036803;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+button:hover {
+    background-color: #058305;
+}
+
+.participant button {
+    margin-left: 15px;
+}
+
+
+.modal {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #6d0000;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-in-out;
+    padding: 30px;
+    box-sizing: border-box;
+}	
+
+.modal__content {
+    font-size: 3vw;
+}
+
+.modal__frame {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 5px dashed #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal--opened {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.giftFrom {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 6vw;
+}
+
+.giftTo {
+    display: block;
+    margin-top: 30px;
+    font-size: 9vw;
+}
